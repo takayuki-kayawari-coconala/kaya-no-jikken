@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "skill_name": "risk-review-skill",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "claude-opus-4-7",
+    "analyzer_model": "claude-opus-4-7",
+    "timestamp": "2026-05-13T04:25:53Z",
+    "evals_run": [0, 1],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 63.0,
+        "tokens": 25092,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "出力に '## リスクレベル判定結果' ヘッダがある", "passed": true, "evidence": "1行目に '## リスクレベル判定結果' あり"},
+        {"text": "判定レベル (A/B/C/D) が明確に1つ示されている", "passed": true, "evidence": "'**判定: レベルC**' と単一レベルで明示"},
+        {"text": "'### 判定根拠' セクションがある", "passed": true, "evidence": "判定根拠セクションあり、4箇条で凝縮"},
+        {"text": "'### 必要な対応' セクションに承認者/リリース手順/releasedチャンネルの3行テーブルがある", "passed": true, "evidence": "3行の表が揃っており、備考列に意味のある追記あり"},
+        {"text": "'### 不確実性・確認事項' セクションが出力に存在しない（旧フォーマットの名残がない）", "passed": true, "evidence": "出力中に '不確実性・確認事項' の文字列なし"},
+        {"text": "確認事項を出す場合、'### レビュー依頼前の確認事項' というラベルで記入者向けに書かれている", "passed": true, "evidence": "'### レビュー依頼前の確認事項（記入者向け）' で出力"},
+        {"text": "確認事項のリスト項目が '- [ ]' チェックボックス形式である", "passed": true, "evidence": "全ての確認事項が '- [ ]' で始まっている"},
+        {"text": "末尾に ADR へのリンクと「最終判断は承認者」の旨が含まれる", "passed": true, "evidence": "ADRリンクと『最終判断は承認者にてお願いします』を末尾に含む"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 98.2,
+        "tokens": 29208,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "出力に '## リスクレベル判定結果' ヘッダがある", "passed": true, "evidence": "1行目に '## リスクレベル判定結果' あり"},
+        {"text": "判定レベル (A/B/C/D) が明確に1つ示されている", "passed": true, "evidence": "'**判定: レベルD**' と単一レベルで明示"},
+        {"text": "'### 判定根拠' セクションがある", "passed": true, "evidence": "判定根拠セクションあり、4箇条で凝縮"},
+        {"text": "'### 必要な対応' セクションに承認者/リリース手順/releasedチャンネルの3行テーブルがある", "passed": true, "evidence": "3行の表あり、Dなのですべて『不要』"},
+        {"text": "'### 不確実性・確認事項' セクションが出力に存在しない（旧フォーマットの名残がない）", "passed": true, "evidence": "出力中に '不確実性・確認事項' の文字列なし"},
+        {"text": "確認事項を出す場合、'### レビュー依頼前の確認事項' というラベルで記入者向けに書かれている", "passed": true, "evidence": "'### レビュー依頼前の確認事項（記入者向け）' で出力"},
+        {"text": "確認事項のリスト項目が '- [ ]' チェックボックス形式である", "passed": true, "evidence": "全ての確認事項が '- [ ]' で始まっている"},
+        {"text": "末尾に ADR へのリンクと「最終判断は承認者」の旨が含まれる", "passed": true, "evidence": "ADRリンクと『最終判断は承認者にてお願いします』を末尾に含む"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.625,
+        "passed": 5,
+        "failed": 3,
+        "total": 8,
+        "time_seconds": 126.2,
+        "tokens": 32404,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "出力に '## リスクレベル判定結果' ヘッダがある", "passed": true, "evidence": "1行目に '## リスクレベル判定結果' あり"},
+        {"text": "判定レベル (A/B/C/D) が明確に1つ示されている", "passed": true, "evidence": "'**判定: レベルC**' と単一レベルで明示"},
+        {"text": "'### 判定根拠' セクションがある", "passed": true, "evidence": "判定根拠セクションあり"},
+        {"text": "'### 必要な対応' セクションに承認者/リリース手順/releasedチャンネルの3行テーブルがある", "passed": true, "evidence": "3行の表あり"},
+        {"text": "'### 不確実性・確認事項' セクションが出力に存在しない（旧フォーマットの名残がない）", "passed": false, "evidence": "出力に '### 不確実性・確認事項' セクションが存在（旧フォーマットの名残）"},
+        {"text": "確認事項を出す場合、'### レビュー依頼前の確認事項' というラベルで記入者向けに書かれている", "passed": false, "evidence": "ラベルが '不確実性・確認事項' のままで、記入者向けの位置づけになっていない（Claude のヘッジ的記述になっている）"},
+        {"text": "確認事項のリスト項目が '- [ ]' チェックボックス形式である", "passed": false, "evidence": "通常の '-' 箇条書きで、チェックボックスではない"},
+        {"text": "末尾に ADR へのリンクと「最終判断は承認者」の旨が含まれる", "passed": true, "evidence": "ADRリンクと『最終判断は承認者』を末尾に含む"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.625,
+        "passed": 5,
+        "failed": 3,
+        "total": 8,
+        "time_seconds": 130.9,
+        "tokens": 30542,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "出力に '## リスクレベル判定結果' ヘッダがある", "passed": true, "evidence": "1行目に '## リスクレベル判定結果' あり"},
+        {"text": "判定レベル (A/B/C/D) が明確に1つ示されている", "passed": true, "evidence": "'**判定: レベルC**' と単一レベルで明示"},
+        {"text": "'### 判定根拠' セクションがある", "passed": true, "evidence": "判定根拠セクションあり"},
+        {"text": "'### 必要な対応' セクションに承認者/リリース手順/releasedチャンネルの3行テーブルがある", "passed": true, "evidence": "3行の表あり"},
+        {"text": "'### 不確実性・確認事項' セクションが出力に存在しない（旧フォーマットの名残がない）", "passed": false, "evidence": "出力に '### 不確実性・確認事項' セクションが存在（旧フォーマットの名残）"},
+        {"text": "確認事項を出す場合、'### レビュー依頼前の確認事項' というラベルで記入者向けに書かれている", "passed": false, "evidence": "'不確実性・確認事項' というラベルで、判定の不確実性ヘッジが書かれている（記入者向け TODO ではない）"},
+        {"text": "確認事項のリスト項目が '- [ ]' チェックボックス形式である", "passed": false, "evidence": "通常の '-' 箇条書きで、チェックボックスではない"},
+        {"text": "末尾に ADR へのリンクと「最終判断は承認者」の旨が含まれる", "passed": true, "evidence": "ADRリンクと『最終判断は承認者』を末尾に含む"}
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 80.6, "stddev": 24.8902, "min": 63.0, "max": 98.2},
+      "tokens": {"mean": 27150.0, "stddev": 2910.4515, "min": 25092, "max": 29208}
+    },
+    "old_skill": {
+      "pass_rate": {"mean": 0.625, "stddev": 0.0, "min": 0.625, "max": 0.625},
+      "time_seconds": {"mean": 128.55, "stddev": 3.3234, "min": 126.2, "max": 130.9},
+      "tokens": {"mean": 31473.0, "stddev": 1316.6328, "min": 30542, "max": 32404}
+    },
+    "delta": {
+      "pass_rate": "+0.38",
+      "time_seconds": "-48.0",
+      "tokens": "-4323"
+    }
+  },
+  "notes": [
+    "新スキルは2ケースとも assertion を全件通過 (100% vs 62.5%)。旧スキルは『不確実性・確認事項』セクションの存在、ラベル、チェックボックス形式の3項目で失敗。",
+    "新スキルは判定までの時間・トークンも少ない（平均 80.6s/27.1k vs 128.6s/31.5k）。出力フォーマットが明確になったことで Claude の往復が減った可能性。",
+    "issue-716 (Renovate auto-merge) で旧=C / 新=D と判定が分かれた。新スキルは『プロダクションコード変更なし』を重視してDに踏み込んでおり、より人間に近い判断。判定の妥当性は承認者の納得感で評価する必要あり。"
+  ]
+}

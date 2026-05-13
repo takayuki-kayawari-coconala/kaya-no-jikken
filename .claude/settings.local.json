@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh issue *)",
+      "Bash(mkdir -p /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill-workspace)",
+      "Bash(cp -r /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill-workspace/skill-snapshot)"
+    ]
+  },
+  "enabledPlugins": {
+    "skill-creator@claude-plugins-official": true
+  }
+}

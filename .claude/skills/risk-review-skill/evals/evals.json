@@ -1,0 +1,19 @@
+{
+  "skill_name": "risk-review-skill",
+  "evals": [
+    {
+      "id": 0,
+      "name": "grpc-sentry-issue-702",
+      "prompt": "https://github.com/welself/coconala-jobmatching/issues/702 のリスクレベルを判定して、コメント用のMarkdownを出力してください。投稿はしなくていいです。",
+      "expected_output": "issue内容を参照したリスクレベル（B/C相当の見込み）の判定と、新フォーマット（判定根拠/必要な対応/補足/レビュー依頼前の確認事項）に沿った出力",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "renovate-automerge-issue-716",
+      "prompt": "https://github.com/welself/coconala-jobmatching/issues/716 のリスクレベルを判定して、コメント用のMarkdownを出力してください。投稿はしなくていいです。",
+      "expected_output": "CIのauto merge設定追加というIssue内容を踏まえたリスクレベル判定（D相当の見込み）と、新フォーマットに沿った出力",
+      "files": []
+    }
+  ]
+}
