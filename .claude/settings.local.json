@@ -3,7 +3,9 @@
     "allow": [
       "Bash(gh issue *)",
       "Bash(mkdir -p /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill-workspace)",
-      "Bash(cp -r /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill-workspace/skill-snapshot)"
+      "Bash(cp -r /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill /Users/takayuki.kayawari/ghq/github.com/takayuki-kayawari-coconala/kaya-no-jikken/.claude/skills/risk-review-skill-workspace/skill-snapshot)",
+      "Bash(grep -E \"\\(\\\\.ts|\\\\.tsx\\)$\")",
+      "Bash(grep -E \"\\\\.\\(ts|prisma\\)$\")"
     ]
   },
   "enabledPlugins": {

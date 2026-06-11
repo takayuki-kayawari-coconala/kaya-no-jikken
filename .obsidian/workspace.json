@@ -11,13 +11,88 @@
             "id": "c7d97d014e84e492",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "技術タスクを分解.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "技術タスクを分解"
+            }
+          },
+          {
+            "id": "94ff732f25194d42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "全てのrakeタスク.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "全てのrakeタスク"
+            }
+          },
+          {
+            "id": "576f89cb52f987db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "全てのrakeタスク.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "全てのrakeタスク"
+            }
+          },
+          {
+            "id": "42c2f2bfee166d5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "全てのrakeタスク.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "全てのrakeタスク"
+            }
+          },
+          {
+            "id": "94aca18f2749bd54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "video-meeting-rake-migration-concerns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "video-meeting-rake-migration-concerns"
+            }
+          },
+          {
+            "id": "947a879c9e1872ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "無題のファイル.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "無題のファイル"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -74,7 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 270.5
   },
   "right": {
     "id": "cd8b787942515bc2",
@@ -90,6 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ページごとのプロキシ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +175,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "バックリンク"
+              "title": "ページごとのプロキシへのバックリンク"
             }
           },
           {
@@ -108,11 +184,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ページごとのプロキシ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "アウトゴーイングリンク"
+              "title": "ページごとのプロキシからのアウトゴーイングリンク"
             }
           },
           {
@@ -150,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "memo.md",
+                "file": "ページごとのプロキシ.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "memoのアウトライン"
+              "title": "ページごとのプロキシのアウトライン"
             }
           }
         ]
@@ -177,8 +254,18 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "ad95fb204fe2ad2c",
+  "active": "94aca18f2749bd54",
   "lastOpenFiles": [
+    "k8s workflowへの移行計画.md",
+    "video-meeting-rake-migration-concerns.md",
+    "ページごとのプロキシ.md",
+    "技術タスクを分解.md",
+    "全てのrakeタスク.md",
+    "無題のファイル.md",
+    "Outsources 通知＋pool機能/スクリーンショット 2026-06-08 15.37.47.png",
+    "Outsources 通知＋pool機能/Outsources 通知＋pool機能.md",
+    "無題のフォルダ 1",
+    "Outsources 通知＋pool機能",
     "memo.md",
     "docs"
   ]
